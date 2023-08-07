@@ -1,4 +1,4 @@
-from exercises.euler.euler_0002.euler_0002 import Euler2
+from exercises.euler.euler_0002.euler2 import Euler2
 import unittest
 
 class TestEuler2(unittest.TestCase):
