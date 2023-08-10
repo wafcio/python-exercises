@@ -1,4 +1,4 @@
-from exercises.advent_of_code.aoc2015.day_01.part2.part2 import Aoc2015Day1Part2
+from exercises.advent_of_code.aoc2015.day01.part2.part2 import Aoc2015Day1Part2
 import unittest
 
 class TestAoc2015Day1Part2(unittest.TestCase):
@@ -18,6 +18,3 @@ class TestAoc2015Day1Part2(unittest.TestCase):
 
         result = Aoc2015Day1Part2().run(input_data)
         assert(result == 1795)
-
-if __name__ == "__main__":
-    unittest.main()

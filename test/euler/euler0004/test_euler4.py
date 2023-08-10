@@ -1,4 +1,4 @@
-from exercises.euler.euler_0004.euler4 import Euler4
+from exercises.euler.euler0004.euler4 import Euler4
 import unittest
 
 class TestEuler4(unittest.TestCase):
@@ -9,6 +9,3 @@ class TestEuler4(unittest.TestCase):
     def test_euler4_second_example(self):
         result = Euler4().run(3)
         assert(result == 906609)
-
-if __name__ == "__main__":
-    unittest.main()

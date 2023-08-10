@@ -12,5 +12,5 @@ This repo contains programming exercises in Python language.
 Every exercise contains test written in unittest.
 
 ```
-python -m unittest
+pytest
 ```
