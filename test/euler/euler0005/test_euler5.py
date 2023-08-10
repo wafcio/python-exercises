@@ -2,10 +2,10 @@ from exercises.euler.euler0005.euler5 import Euler5
 import unittest
 
 class TestEuler5(unittest.TestCase):
-    def test_euler5_first_example(self):
+    def test_with_input_10(self):
         result = Euler5().run(10)
-        assert(result == 2520)
+        assert(result == 2_520)
 
-    def test_euler5_second_example(self):
+    def test_with_input_20(self):
         result = Euler5().run(20)
-        assert(result == 232792560)
+        assert(result == 232_792_560)

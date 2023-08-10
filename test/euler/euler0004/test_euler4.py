@@ -2,10 +2,10 @@ from exercises.euler.euler0004.euler4 import Euler4
 import unittest
 
 class TestEuler4(unittest.TestCase):
-    def test_euler4_first_example(self):
+    def test_with_input_2(self):
         result = Euler4().run(2)
         assert(result == 9009)
 
-    def test_euler4_second_example(self):
+    def test_with_input_3(self):
         result = Euler4().run(3)
-        assert(result == 906609)
+        assert(result == 906_609)
