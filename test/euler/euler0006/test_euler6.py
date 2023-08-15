@@ -6,6 +6,6 @@ class TestEuler6(unittest.TestCase):
         result = Euler6().run(10)
         assert(result == 2_640)
 
-    def test_with_input_20(self):
+    def test_with_input_100(self):
         result = Euler6().run(100)
         assert(result == 25_164_150)
