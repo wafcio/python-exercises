@@ -5,6 +5,10 @@ import unittest
 from exercises.euler.euler0009.euler9 import Euler9
 
 class TestEuler9(unittest.TestCase):
+    def test_with_input_1(self):
+        result = Euler9().run(1)
+        assert result == 0
+
     def test_with_input_12(self):
         result = Euler9().run(12)
         assert result == 60

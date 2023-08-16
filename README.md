@@ -21,3 +21,11 @@ Every exercise contains test written in unittest.
 ```
 pytest
 ```
+
+### Check test coverage
+
+```
+coverage run -m pytest
+coverage report -m
+coverage html
+```
