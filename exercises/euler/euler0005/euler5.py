@@ -2,29 +2,31 @@ from collections import Counter
 import numpy
 
 class Euler5:
-    def run(self, n):
-        factors = []
+    factors = []
 
-        for number in range(2, n):
-            current_factors = self.prime_factors(number)
-            missing_factors = self.list_difference(current_factors, factors)
-            factors += missing_factors
+    def run(self, max_number):
+        for number in range(2, max_number):
+            current_factors = Euler5.prime_factors(number)
+            missing_factors = Euler5.list_difference(current_factors, self.factors)
+            self.factors += missing_factors
 
-        return numpy.prod(factors)
+        return numpy.prod(self.factors)
 
-    def list_difference(self, a, b):
-        diff = Counter(a) - Counter(b)
+    @staticmethod
+    def list_difference(list_a, list_b):
+        diff = Counter(list_a) - Counter(list_b)
         return list(diff.elements())
 
-    def prime_factors(self, number):
-        m = 2
+    @staticmethod
+    def prime_factors(number):
+        factor = 2
         numbers = []
 
         while number > 1:
-            if number % m == 0:
-                number = number / m
-                numbers.append(m)
+            if number % factor == 0:
+                number = number / factor
+                numbers.append(factor)
             else:
-                m += 1
+                factor += 1
 
         return numbers

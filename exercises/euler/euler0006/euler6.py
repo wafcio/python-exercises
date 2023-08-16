@@ -1,12 +1,12 @@
 class Euler6:
-    def run(self, n):
-        num1 = 0
-        num2 = 0
+    number_1 = 0
+    number_2 = 0
 
-        for m in range(1, n+1):
-            num1 += pow(m, 2)
-            num2 += m
+    def run(self, number):
+        for num in range(1, number+1):
+            self.number_1 += pow(num, 2)
+            self.number_2 += num
 
-        num2 = pow(num2, 2)
+        self.number_2 = pow(self.number_2, 2)
 
-        return num2 - num1
+        return self.number_2 - self.number_1

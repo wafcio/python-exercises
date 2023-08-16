@@ -1,27 +1,27 @@
 import math
 
 class Euler9:
-    def run(self, n):
-        a = 1
-        b = 2
+    number_a = 1
+    number_b = 2
 
+    def run(self, number):
         while True:
-            pow_a = pow(a, 2)
-            pow_b = pow(b, 2)
-            c = math.sqrt(pow_a + pow_b)
-            sum = a + b + c
+            pow_a = pow(self.number_a, 2)
+            pow_b = pow(self.number_b, 2)
+            number_c = math.sqrt(pow_a + pow_b)
+            total = self.number_a + self.number_b + number_c
 
-            if a + b > n:
+            if self.number_a + self.number_b > number:
                 break
 
-            if sum < n:
-                b += 1
+            if total < number:
+                self.number_b += 1
 
-            if sum > n:
-                a += 1
-                b = a + 1
+            if total > number:
+                self.number_a += 1
+                self.number_b = self.number_a + 1
 
-            if sum == n:
-                return a * b * c
+            if total == number:
+                return self.number_a * self.number_b * number_c
 
         return 0

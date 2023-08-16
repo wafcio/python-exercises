@@ -1,11 +1,11 @@
 class Euler3:
-    def run(self, n):
-        m = 2
+    factor = 2
 
-        while n > 1:
-            if n % m == 0:
-                n = n / m
+    def run(self, number):
+        while number > 1:
+            if number % self.factor == 0:
+                number = number / self.factor
             else:
-                m += 1
+                self.factor += 1
 
-        return m
+        return self.factor

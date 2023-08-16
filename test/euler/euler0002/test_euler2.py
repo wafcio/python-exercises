@@ -1,7 +1,10 @@
-from exercises.euler.euler0002.euler2 import Euler2
+# pylint: disable=no-self-use
+
 import unittest
+
+from exercises.euler.euler0002.euler2 import Euler2
 
 class TestEuler2(unittest.TestCase):
     def test_with_input_4_000_000(self):
         result = Euler2().run(4_000_000)
-        assert(result == 4_613_732)
+        assert result == 4_613_732

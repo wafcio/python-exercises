@@ -1,26 +1,17 @@
-import math
+from exercises.utils.prime import is_prime
 
 class Euler7:
-    def run(self, n):
-        i = 0
-        number = 2
+    index = 0
+    number = 2
 
+    def run(self, max_number):
         while True:
-            if self.is_prime(number):
-                i += 1
+            if is_prime(self.number):
+                self.index += 1
 
-            if i == n:
+            if self.index == max_number:
                 break
 
-            number += 1
+            self.number += 1
 
-        return number
-
-    def is_prime(self, number):
-        sq = int(math.sqrt(number))
-
-        for factor in range(2, sq+1):
-            if number % factor == 0:
-                return False
-
-        return True
+        return self.number

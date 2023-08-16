@@ -1,11 +1,11 @@
 class Euler1:
-    def run(self, n):
-        sum = 0
+    total = 0
 
-        for number in range(1, n):
+    def run(self, max_number):
+        for number in range(1, max_number):
             if number % 3 == 0:
-                sum += number
+                self.total += number
             elif number % 5 == 0:
-                sum += number
+                self.total += number
 
-        return sum
+        return self.total

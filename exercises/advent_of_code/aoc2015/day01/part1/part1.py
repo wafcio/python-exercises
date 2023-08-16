@@ -1,11 +1,11 @@
 class Aoc2015Day1Part1:
-    def run(self, input):
-        level = 0
+    level = 0
 
-        for char in input:
+    def run(self, input_data):
+        for char in input_data:
             if char == "(":
-              level += 1
+                self.level += 1
             elif char == ")":
-              level -= 1
+                self.level -= 1
 
-        return level
+        return self.level

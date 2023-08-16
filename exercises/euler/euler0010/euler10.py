@@ -1,19 +1,11 @@
-import math
+from exercises.utils.prime import is_prime
 
 class Euler10:
-    def run(self, n):
-        sum = 0
-        for number in range(2, n):
-            if self.is_prime(number):
-                sum += number
+    total = 0
 
-        return sum
+    def run(self, max_number):
+        for number in range(2, max_number):
+            if is_prime(number):
+                self.total += number
 
-    def is_prime(self, number):
-        sq = int(math.sqrt(number))
-
-        for factor in range(2, sq+1):
-            if number % factor == 0:
-                return False
-
-        return True
+        return self.total
